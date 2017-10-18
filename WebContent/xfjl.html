@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>选择查询日期</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+<link rel="stylesheet" type="text/css" href="assets/js/datedropper.css">
+<style type="text/css">
+.demo{margin:80px auto 40px auto;width:320px}
+.input{padding:6px;border:1px solid #d3d3d3}
+#footer {
+				height: 40px;
+				line-height: 40px;
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				text-align: center;
+				/* background: #333;*/
+				color: #000;
+				font-family: Arial;
+				font-size: 12px;
+				letter-spacing: 1px;
+			}
+				.btn-1 {
+	color: #9c89f7;
+}
+
+.btn-1:hover {
+	-webkit-animation: halftone 1s forwards;
+	animation: halftone 1s forwards;
+	background: -webkit-radial-gradient(circle, #9c89f7 0.2em, rgba(0, 0, 0, 0) 0.25em) 0 0/1.25em 1.25em, -webkit-radial-gradient(circle, #9c89f7 0.2em, rgba(0, 0, 0, 0) 0.25em) 6.25em 6.25em/1.25em 1.25em;
+	background: radial-gradient(circle, #9c89f7 0.2em, rgba(0, 0, 0, 0) 0.25em) 0 0/1.25em 1.25em, radial-gradient(circle, #9c89f7 0.2em, rgba(0, 0, 0, 0) 0.25em) 6.25em 6.25em/1.25em 1.25em;
+	color: #e4f789;
+}
+.btn {
+	background: none;
+	border: 2px solid;
+	border-bottom-width: 4px;
+	font: inherit;
+	letter-spacing: inherit;
+	margin: 1em;
+	padding: 1em 2em;
+	text-transform: inherit;
+	-webkit-transition: color 1s;
+	transition: color 1s;
+}
+@-webkit-keyframes halftone {
+	100% {
+		background-size: 2.375em 2.375em, 0.1em 0.1em;
+	}
+}
+
+@keyframes halftone {
+	100% {
+		background-size: 2.375em 2.375em, 0.1em 0.1em;
+	}
+}
+html,body {
+	-webkit-text-size-adjust:none;
+	background:#90EE90;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="main">
+   <form action="xfjl.jsp" method="post">
+   		<div class="demo" align="center">
+		<p>开始日期：<input type="text" class="input" id="pickdate1" name="one"/></p><br/>
+		<p>结束日期：<input type="text" class="input" id="pickdate2" name="two"/></p><br/>
+		<input type="submit" class="btn btn-1 align="center" value="一键查询" />
+		<!--<button class="btn btn-1">Hover me</button>-->
+		<!--<p>请选择时间：<input type="text" class="input" id="picktime" /></p>-->
+	</div>
+   </form>
+  <p align="cent">ps：查询日期范围越大，数据越多，反应速度会相应变慢。</p>
+	
+</div>
+
+<script type="text/javascript" src="assets/js/jquery-1.12.3.min.js"></script>
+<script src="assets/js/datedropper.min.js"></script>
+<script>
+$("#pickdate1").dateDropper({
+	animate: false,
+	format: 'Y-m-d',
+	maxYear: '2030'
+});
+//$("#picktime").timeDropper({
+//	meridians: false,
+//	format: 'HH:mm',
+//});
+$("#pickdate2").dateDropper({
+	animate: false,
+	format: 'Y-m-d',
+	maxYear: '2030'
+});
+</script>
+
+   
+    
+</body>
+</html>

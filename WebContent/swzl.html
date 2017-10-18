@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>填写信息</title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			body {
+				background: #f9f9f9;
+				font-size: 14px;
+			}
+			
+			#explain {
+				height: 60px;
+				border-bottom: 1px solid #999999;
+				background: #eee;
+				font-size: 14px;
+				color: #666;
+				text-align: center;
+				line-height: 60px;
+			}
+			
+			#explain a {
+				color: #990000;
+				font-weight: bold;
+				text-decoration: none;
+				border-bottom: 1px dotted #990000;
+			}
+			
+			#explain a:hover {
+				border-bottom: 2px solid #990000;
+			}
+			
+			#explain strong {
+				color: #990000;
+			}
+			
+			#box {
+				width: 450px;
+				padding: 10px;
+				border: 1px solid #ccc;
+				background: #f4f4f4;
+				margin: 10px auto;
+			}
+			
+			#fill_in {
+				margin-bottom: 10px;
+			}
+			
+			#fill_in li {
+				padding: 5px 0;
+			}
+			
+			#fill_in .text,.text2 {
+				width: 380px;
+				height: 30px;
+				padding: 0 10px;
+				border: 1px solid #ccc;
+				line-height: 30px;
+				font-size: 14px;
+				font-family: arial;
+			}
+			
+			#fill_in textarea {
+				width: 380px;
+				height: 100px;
+				line-height: 20px;
+				padding: 5px 10px;
+				border: 1px solid #ccc;
+				font-size: 14px;
+				font-family: arial;
+				overflow: auto;
+				vertical-align: top;
+			}
+			
+			#fill_in .btn {
+				border: none;
+				width: 100px;
+				height: 30px;
+				border: 1px solid #ccc;
+				background: #fff;
+				color: #666;
+				font-size: 14px;
+				position: relative;
+				left: 42px;
+			}
+			
+			
+		</style>
+		
+	</head>
+	<body>
+		<div id="box">
+			<ul id="fill_in">
+				<form method="post" action="swzl_post.jsp">
+					<select name="s">
+  					<option value ="zsz">找失主</option>
+ 					 <option value ="zdx">找东西</option>
+				</select>
+					<li> Q Q：<input name="contact" id="text" type="text" class="text" placeholder="请填写联系方式，若为手机号请说明。"/></li>
+					<!--<li>联系：<input id="text2" type="text" class="text2" /></li>-->
+					<li>内容：<textarea name="info"></textarea></li>
+					<li><input id="btn" type="submit" value="提交" class="btn" /></li>
+				</form>
+			</ul>
+		</div>
+	</body>
+
+</html>
